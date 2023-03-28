@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>COCKTAILS MENU</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/cocktails.css">
+    <script src="./constants.js"></script>
+    <script src="./utilis.js"></script>
+    <script src="./model/UserManager.js"></script>
+    <script src="./model/CocktailsManager.js"></script>
+
+    <script src="./controllers/LogInController.js"></script>
+    <script src="./controllers/RegisterController.js"></script>
+
+</head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#people" id="linkFilters">Filters</a>
+              <a class="navbar-brand" href="#people" id="linkCocktails">Cocktails</a>
+              <a class="nav-link" href="#login" id="userManag">Logout</a>
+            </div>
+          </nav>
+    </header>
+
+    <div id="login" class="text-center">
+        <form id="loginForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">User name</label>
+              <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Log In</button>
+          </form>
+    </div>
+
+    <div id="register" class="text-center">
+        <form id="regForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">User name</label>
+              <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input name="password" type="password" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                <input name="confirmPass" type="password" class="form-control" id="exampleInputPassword1" required>
+              </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+    </div>
+
+    <div id="cocktails">
+        <input type="text" id="searchPartiesInput" value="Search...">
+        <div id="coctailOfTheDay"></div> 
+        <div id="favorites"></div>
+        <div id="cocktailsList"></div>
+    </div>
+
+    <div id="details">
+        <div id="detailsContainer">
+        <div id="leftSide"></div>
+        <div id="rightSide"></div>
+        </div>
+    </div>
+
+    <div id="filter"></div>
+
+    <div id="error">Page not found!</div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="viewController.js"></script>
+</body>
+</html>

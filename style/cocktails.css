@@ -1,0 +1,23 @@
+#register {
+    width: 400px;
+    margin: auto;
+    background-color: aqua;
+  }
+  
+  #login {
+    width: 400px;
+    margin: auto;
+    background-color: bisque;
+  }
+
+  #coctailOfTheDay, #favorites, #cocktailsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  #detailsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
